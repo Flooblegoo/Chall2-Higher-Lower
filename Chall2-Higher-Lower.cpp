@@ -34,7 +34,6 @@ int main()
 		std::cout << "You have " << tries_left << " tries remaining!\n";
 		std::cout << "GUESS: ";
 		std::cin >> player_guess;
-		std::cin.ignore();
 
 		// Compare player_guess to the_number and exit game loop if guessed/tries run out
 		if (player_guess > the_number)
