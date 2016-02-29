@@ -1,6 +1,6 @@
 Acquire Random Number between 1 - 100
 Declare variables (tries, tries_left, the_number, player_guess, player_restart)
-Set tries to 10 remaining (while tries <= 10 or some shit)
+Set tries to 5 remaining (while tries <= 5 or some shit)
 Cycle through guessing whilst telling player if higher or lower and increasing tries++ every guess
 When guessed or tries run out break while loop
 if player guessed congratulate ask to play again
