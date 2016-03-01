@@ -1,4 +1,3 @@
-﻿  stdafx.cpp
-  Chall2-Higher-Lower.cpp
+﻿  Chall2-Higher-Lower.cpp
 g:\documents\programming\c++\github\chall2-higher-lower\chall2-higher-lower.cpp(14): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Chall2-Higher-Lower.vcxproj -> G:\Documents\Programming\C++\GitHub\Chall2-Higher-Lower\Debug\Chall2-Higher-Lower.exe

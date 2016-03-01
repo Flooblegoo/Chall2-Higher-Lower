@@ -25,8 +25,10 @@ int main()
 	std::string player_restart;
 
 	// Welcome Player and begin game loop
-	std::cout << "Welcome to The Number Guessing Game!\n";
-	std::cout << "I am thinking of a number between 1 - 100! Make a guess!\n\n";
+	std::cout << "--------------------------------------------------------\n";
+	std::cout << "         Welcome to The Number Guessing Game!\n";
+	std::cout << "I am thinking of a number between 1 - 100! Make a guess!\n";
+	std::cout << "--------------------------------------------------------\n\n";
 
 	while (tries_left > 0 && GAME_CONTINUE == true)
 	{
@@ -34,7 +36,7 @@ int main()
 		tries_left = MAX_NUM_TRIES - tries_used;
 
 		// Begin game text and acquiring player guess
-		std::cout << "You have " << tries_left << " tries remaining!\n";
+		std::cout << "You have " << tries_left << " tries remaining!\n\n";
 		std::cout << "GUESS: ";
 		std::cin >> player_guess;
 
@@ -52,7 +54,9 @@ int main()
 		else
 		{
 			tries_used++;
-			std::cout << "Congratulations! You guessed the number in " << tries_used << " tries!\n\n";
+			std::cout << "-----------------------------------------------------\n";
+			std::cout << "|Congratulations! You guessed the number in " << tries_used << " tries!|\n";
+			std::cout << "-----------------------------------------------------\n\n";
 			GAME_CONTINUE = false;
 		}
 	}
@@ -61,7 +65,7 @@ int main()
 	
 	while (MENU_CONTINUE == true)
 	{
-		std::cout << "\nWould you like to play again? Y/N: ";
+		std::cout << "Would you like to play again? Y/N: ";
 		std::cin >> player_restart;
 		std::cin.ignore();
 
@@ -77,6 +81,11 @@ int main()
 				std::cout << "\nThank-you!\n";
 			}
 			MENU_CONTINUE = false;
+		}
+
+		else if (player_restart == "memesaturken")
+		{
+			std::cout << "\nHas anyone ever really been so far even as to want to go do look more like?\n\n";
 		}
 
 		else
