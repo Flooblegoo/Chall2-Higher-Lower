@@ -19,16 +19,19 @@ int main()
 	int tries_used = 0;
 	int tries_left = 5;
 	int player_guess;
+	const int MAX_NUM_TRIES = 10;
+	bool GAME_CONTINUE = true;
+	bool MENU_CONTINUE = true;
 	std::string player_restart;
 
 	// Welcome Player and begin game loop
 	std::cout << "Welcome to The Number Guessing Game!\n";
 	std::cout << "I am thinking of a number between 1 - 100! Make a guess!\n\n";
 
-	while (tries_left > 0 && true)
+	while (tries_left > 0 && GAME_CONTINUE == true)
 	{
 		// Check tries remaining
-		tries_left = tries_left - tries_used;
+		tries_left = MAX_NUM_TRIES - tries_used;
 
 		// Begin game text and acquiring player guess
 		std::cout << "You have " << tries_left << " tries remaining!\n";
@@ -38,24 +41,25 @@ int main()
 		// Compare player_guess to the_number and exit game loop if guessed/tries run out
 		if (player_guess > the_number)
 		{
-			std::cout << "\nNope! It's lower than that! Try again!\n\n";
+			std::cout << "Nope! It's lower than that! Try again!\n\n";
 			tries_used++;
 		}
 		else if (player_guess < the_number)
 		{
-			std::cout << "\nNope! It's higher than that! Try again!\n\n";
+			std::cout << "Nope! It's higher than that! Try again!\n\n";
 			tries_used++;
 		}
 		else
 		{
 			tries_used++;
-			std::cout << "\nCongratulations! You guessed the number in " << tries_used << " tries!\n\n";
-			return false;
+			std::cout << "Congratulations! You guessed the number in " << tries_used << " tries!\n\n";
+			GAME_CONTINUE = false;
 		}
 	}
 
 	// Confirm if player wishes to play again and restart or exit
-	while (true)
+	
+	while (MENU_CONTINUE == true)
 	{
 		std::cout << "\nWould you like to play again? Y/N: ";
 		std::cin >> player_restart;
@@ -71,9 +75,8 @@ int main()
 			if (player_restart == "N" || player_restart == "n")
 			{
 				std::cout << "\nThank-you!\n";
-				return false;
 			}
-			return false;
+			MENU_CONTINUE = false;
 		}
 
 		else
