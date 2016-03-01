@@ -41,7 +41,7 @@ int main()
 			std::cout << "\nNope! It's lower than that! Try again!\n\n";
 			tries_used++;
 		}
-		if (player_guess < the_number)
+		else if (player_guess < the_number)
 		{
 			std::cout << "\nNope! It's higher than that! Try again!\n\n";
 			tries_used++;
